@@ -44,7 +44,7 @@ fi
 debug_echo "Original command: npm $args"
 
 # Handle the translation based on the new command
-if [ "$newcmd" = "yarn" || "$newcmd" = "bun" ]; then
+if [ "$newcmd" = "yarn" ] || [ "$newcmd" = "bun" ]; then
   # For yarn/bun, translate 'npm install' to 'yarn/bun add'
   if echo "$args" | grep -q '^install'; then
     after_install=$(echo "$args" | sed 's/^install //')
