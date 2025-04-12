@@ -47,7 +47,7 @@
 After curl is installed on your system, run:
 ```bash
 sudo curl -o /usr/bin/npm https://raw.githubusercontent.com/JarzaClay/npmswap/refs/heads/main/npm
-such chmod +x /usr/bin/npm
+sudo chmod +x /usr/bin/npm
 ```
 Then test the program by running:
 ```bash
