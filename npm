@@ -52,6 +52,10 @@ if [ "$newcmd" = "yarn" ] || [ "$newcmd" = "bun" ]; then
   else
     output="$newcmd $args"
   fi
+elif [ "$newcmd" = "npm" ]; then
+  # Fall back to actual npm CLI
+  debug_echo "Falling back to real npm"
+  exec node /usr/lib/node_modules/npm/lib/cli.js $args
 else
   # For other commands or package managers, replace 'npm' with newcmd
   output="$newcmd $args"
